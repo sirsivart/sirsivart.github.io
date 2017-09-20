@@ -18,18 +18,7 @@ footer {
 }
 
 
-.footer-name {
-  grid-column: 2;
-  text-align: center;
-}
 
-.back-to-top {
-  grid-column: 3;
-
-  @include tablet {
-    display: none;
-  }
-}
 
 .back-to-top a:link,
 .back-to-top a:visited,
@@ -40,23 +29,40 @@ footer {
 }
 
 .footer {
+  margin: 0 auto;
   display: grid;
-  grid-template: 100% /1fr 1fr;
-}
-
-.footer-li {
-
-  grid-template: 100% /1fr 1fr;
-
+  
   @include tablet {
-    text-align: center;
-    grid-column: 1;
+    grid-template: 100% /1fr 1fr;
   }
 }
 
+.footer-li {
+display: grid;
+  text-align: center;
+  grid-template-columns: 50% 50%;
+
+  
+}
+.footer-name {
+  grid-column: 1;
+  text-align: center;
+}
+
+.back-to-top {
+  grid-column: 2;
+
+  @include tablet {
+    display: none;
+  }
+}
 .footer-nav-container {
+  display: none;
   padding: 0;
     grid-column: 2;
+    @include tablet {
+    display: inline-block;
+  }
 }
 .footer-nav {
   @include tablet {
