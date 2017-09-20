@@ -1,0 +1,31 @@
+.top-wrapper {
+  @include desktop {
+    display: grid;
+    grid-template: 100% / 50% 50%;
+    max-width: 92%;
+    margin: 30px auto 0;
+  }
+}
+
+header {
+  @extend %centered;
+
+  @include tablet {
+    margin-top: 65px;
+  }
+
+
+  @include desktop {
+    grid-column: 1;
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 0;
+    padding: 0;
+    padding-left: 0;
+    text-align: left;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}

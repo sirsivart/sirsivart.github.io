@@ -1,0 +1,62 @@
+#contact {
+  padding-top: 2em;
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #{$contact-text};
+
+    @include tablet {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+    padding-left: 0;
+    list-style-type: none;
+    color: #{$contact-text};
+
+    li a:link,
+    li a:visited {
+      color: #{$contact-links};
+    }
+  }
+
+  @include desktop {
+    padding-top: 2em;
+  }
+}
+
+.phone {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.email {
+  grid-column: 2;
+  grid-row:2;
+}
+.socialIcon {
+  grid-row: 3;
+}
+
+a svg:hover #githubPath,
+a svg:hover #linkedinPath,
+a svg:hover #facebookPath {
+  fill: white;
+}
+
+
+a svg #githubPath,
+a svg #linkedinPath,
+a svg #facebookPath { 
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}

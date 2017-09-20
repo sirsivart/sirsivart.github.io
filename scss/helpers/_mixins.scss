@@ -1,0 +1,18 @@
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Max Width and Margin
+
+@mixin widthMargin($maxwidth: null, $margin: null) {
+  max-width: $maxwidth;
+  margin: $margin;
+}

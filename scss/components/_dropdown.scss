@@ -1,0 +1,62 @@
+/* Dropdown Button */
+.dropbtn {
+  background-color: #{$nav-background-phone};
+  color: #{$button-text};
+  padding: 15px 75px 15px 75px;
+  font-size: #{$button-font-size};
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  color: #{$portfolio-caption};
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: #{$nav-background-phone};
+  z-index: 10;
+  height: 51px;
+
+  @include tablet {
+    display: none;
+  }
+
+
+  @include desktop {
+    display: none;
+  }
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #{$dropdown-background};
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  -webkit-padding-start: 0px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #{$dropdown-text};
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #{$dropdown-hover};
+  text-decoration: none;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}

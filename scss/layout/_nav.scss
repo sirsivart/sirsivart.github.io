@@ -1,0 +1,65 @@
+.main-nav {
+  @extend %zeropadding;
+
+  @extend %centered;
+
+  @include desktop {
+    grid-column: 2;
+    margin-top: 30px;
+    margin-right: 0;
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+.nav {
+  @extend %zeropadding;
+
+  list-style-type: none;
+  z-index: 1000;
+
+  li {
+    margin: 0.5em auto;
+    padding: 0.75em 0;
+    background-color: #{$nav-background-phone};
+  }
+
+  a:link,
+  a:visited {
+    padding: 0.5em 2em;
+    color: #{$nav-text};
+    background-color: #{$nav-background-phone};
+  }
+
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 auto 30px;
+
+    li {
+      float: left;
+      background-color: #{$nav-background-tab-desk};
+    }
+
+    a:link,
+    a:visited {
+      font-weight: bold;
+      padding: 0.5em 2em;
+      color: #{$nav-text};
+      background-color: #{$nav-background-tab-desk};
+    }
+  }
+
+
+  @include desktop {
+    a:link,
+    a:visited {
+      font-weight: bold;
+      padding: 0 0 0 2em;
+      color: #{$nav-text};
+      background-color: #{$nav-background-tab-desk};
+    }
+  }
+}
